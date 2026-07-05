@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Credit Card Approval Prediction</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Credit Card Approval Prediction</h1>
+
+<form action="/predict" method="POST">
+    
+<input type="number" name="Ind_ID" placeholder="Applicant ID" required>
+
+<input type="number" name="GENDER" placeholder="Gender (0/1)" required>
+
+<input type="number" name="Car_Owner" placeholder="Car Owner (0/1)" required>
+
+<input type="number" name="Propert_Owner" placeholder="Property Owner (0/1)" required>
+
+<input type="number" name="CHILDREN" placeholder="Children" required>
+
+<input type="number" name="Annual_income" placeholder="Annual Income" required>
+
+<input type="number" name="Type_Income" placeholder="Income Type Code" required>
+
+<input type="number" name="EDUCATION" placeholder="Education Code" required>
+
+<input type="number" name="Marital_status" placeholder="Marital Status Code" required>
+
+<input type="number" name="Housing_type" placeholder="Housing Type Code" required>
+
+<input type="number" name="Birthday_count" placeholder="Birthday Count" required>
+
+<input type="number" name="Employed_days" placeholder="Employment Days" required>
+
+<input type="number" name="Mobile_phone" placeholder="Mobile Phone (0/1)" required>
+
+<input type="number" name="Work_Phone" placeholder="Work Phone (0/1)" required>
+
+<input type="number" name="Phone" placeholder="Phone (0/1)" required>
+
+<input type="number" name="EMAIL_ID" placeholder="Email ID (0/1)" required>
+
+<input type="number" name="Type_Occupation" placeholder="Occupation Code" required>
+
+<input type="number" step="0.1" name="Family_Members" placeholder="Family Members" required>
+
+<button type="submit">Predict</button>
+
+</form>
+
+{% if prediction %}
+
+<h2>{{ prediction }}</h2>
+
+{% endif %}
+
+</div>
+
+</body>
+
+</html>
