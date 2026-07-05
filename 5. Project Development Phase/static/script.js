@@ -1,0 +1,1 @@
+console.log("Credit Card Approval Prediction System Loaded");
