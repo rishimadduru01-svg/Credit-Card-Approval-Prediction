@@ -10,3 +10,4 @@
 6. Project Testing
 7. Project Documentation
 8. Project Demonstration
+9. Project Demo Video
